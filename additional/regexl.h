@@ -45,7 +45,7 @@ enum { DONE = -1 };
 /* the functions .make, .unmake initialize and destroy;
    in other adt's functions .new and .free do heap allocation */ 
 
-enum Ctl { MORE, KILL, RESET };
+enum Ctl { MORE, KILL, RESET }; /*Might just be me but I'd put a comment here saying what this does as well*/
 adt Chan {
 	extern chan(Ctl) ctl;
 	extern chan(Match) data;
@@ -186,7 +186,7 @@ adt Seq {
 	Parse parse;
 	void print(*Rex);
 };	
-enum Hard { EASY, HARD };
+enum Hard { EASY, HARD };/*And this*/
 aggr Stat {	/* used only in Rex.hard1() */
 	int n;	/* length of regex, if no closure or backref */
 	int s;	/* number of simple closures */
